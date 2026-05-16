@@ -8,4 +8,5 @@ next-env.d.ts
 ._*
 .env*.local
 
-# Папка docs/ (собранный сайт для GitHub Pages) — НЕ игнорируется, коммитится.
+# Собранный сайт лежит в корне ветки (index.html, 404.html, _next/, .nojekyll)
+# и КОММИТИТСЯ — GitHub Pages раздаёт его прямо из корня ветки exmpl2.
