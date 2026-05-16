@@ -27,28 +27,23 @@ npm run build    # статика собирается в папку out/
 
 ## Деплой на GitHub Pages
 
-Собранный сайт лежит **в корне ветки `exmpl2`** (`index.html`, `404.html`,
-`_next/`, `.nojekyll`) — GitHub Pages раздаёт его как статику напрямую.
+Публикация — через GitHub Actions: workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+при каждом пуше в ветку `exmpl2` собирает статику и публикует её на Pages.
+Ветка хранит **только исходный код**, без собранных файлов.
 
 Адрес страницы: `https://mrnovoseltsev.github.io/Gastronom1/` — это project page,
 поэтому сборка идёт с `basePath=/Gastronom1` (имя репозитория, регистр важен).
 
-**Пересобрать сайт после правок:**
+**Настройка репозитория (один раз):** Settings → Pages → Source = **GitHub
+Actions**. После этого деплой полностью автоматический.
 
-```bash
-NEXT_BASE_PATH=/Gastronom1 npm run build   # статика → out/
-cp -R out/. .                              # выложить сборку в корень ветки
-git add -A && git commit -m "rebuild site" && git push
-```
+**Обновить сайт:** просто запушить изменения в `exmpl2` — workflow соберёт и
+опубликует. Прогресс виден во вкладке **Actions**.
 
-`.nojekyll` в корне отключает Jekyll — иначе Pages рендерит `README.md` вместо
-сайта и игнорирует папку `_next/`.
-
-**Настройка репозитория (один раз):** Settings → Pages → Source = **Deploy from
-a branch** → Branch = **`exmpl2`**, папка = **`/ (root)`** → Save.
-
-> README не подменяет сайт: рядом с ним в корне лежит `index.html`, а `.nojekyll`
-> запрещает Jekyll рендерить README.
+> Почему так, а не «Deploy from a branch»: при раздаче из ветки GitHub прогоняет
+> Jekyll, который рендерит `README.md` вместо сайта и вырезает папку `_next/`
+> (имена с `_` он игнорирует). GitHub Actions публикует артефакт напрямую — без
+> Jekyll, поэтому проблема не возникает в принципе.
 
 ## Структура
 
