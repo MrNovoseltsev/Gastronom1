@@ -1,0 +1,22 @@
+import Link from "next/link";
+
+type BreadcrumbItem = { label: string; href?: string };
+
+export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
+  return (
+    <nav className="mb-7 flex flex-wrap items-center gap-1.5 text-[11px] tracking-[0.06em] text-neutral-500">
+      {items.map((item, i) => (
+        <span key={i} className="flex items-center gap-1.5">
+          {i > 0 && <span aria-hidden="true">›</span>}
+          {item.href ? (
+            <Link href={item.href} className="hover:underline">
+              {item.label}
+            </Link>
+          ) : (
+            <span>{item.label}</span>
+          )}
+        </span>
+      ))}
+    </nav>
+  );
+}
