@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* ───────── Дизайн-токены gastronom1 (см. styles.css макета) ───────── */
+@theme {
+  --color-bg: #f4efe7;
+  --color-bg-card: #faf6ee;
+  --color-bg-deep: #eae3d6;
+  --color-ink: #14110d;
+  --color-ink-soft: #4a453c;
+  --color-ink-mute: #8c8578;
+  --color-line: #d9d1bf;
+  --color-line-soft: #e5decd;
+  --color-red: #e1241c;
+  --color-red-deep: #b91a12;
+  --color-olive: oklch(58% 0.1 110);
+  --color-cream: #fffdf7;
+
+  --font-display: var(--font-manrope), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-text: var(--font-inter), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", Menlo, monospace;
+
+  --radius-card: 8px;
+
+  --shadow-card: 0 2px 12px -4px rgba(20, 17, 13, 0.12), 0 1px 2px rgba(20, 17, 13, 0.06);
+  --shadow-drawer: -8px 0 32px -8px rgba(0, 0, 0, 0.2);
+  --shadow-modal: 0 24px 64px -16px rgba(0, 0, 0, 0.35), 0 4px 16px rgba(0, 0, 0, 0.12);
+
+  /* единственный брейкпоинт: десктоп / мобайл */
+  --breakpoint-md: 768px;
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-text);
+    color: var(--color-ink);
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  /* скрытие скроллбара у горизонтальных лент (суб-нав, мобильный сайдбар) */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

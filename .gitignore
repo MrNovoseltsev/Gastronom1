@@ -1,0 +1,11 @@
+/node_modules
+/.next
+/out
+/build
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+._*
+.env*.local
+
+# Папка docs/ (собранный сайт для GitHub Pages) — НЕ игнорируется, коммитится.
