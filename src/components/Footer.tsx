@@ -46,7 +46,7 @@ export function Footer() {
                 Soler 5775, Palermo
               </a>
             </li>
-            <li className="text-sm text-[#DBD2BF]">пн—вс · 12:00—22:00</li>
+            <li className="text-sm text-[#DBD2BF]">пн—вс · 12:00—20:00</li>
             <li className="mt-2 flex gap-2.5">
               <a
                 href="https://www.instagram.com/gastronom.palermo?igsh=bmFrODV4cnAxNXIz"

@@ -74,15 +74,15 @@ export function About() {
           <div className="mt-1 border-t border-white/10 pt-3.5 font-mono text-xs text-[#C9C1AE]">
             <div className="flex justify-between py-1 text-cream">
               <span>Сегодня · сб</span>
-              <span className="text-olive">открыто · до 22:00</span>
+              <span className="text-olive">открыто · до 20:00</span>
             </div>
             <div className="flex justify-between py-1">
               <span>пн — пт</span>
-              <span>12:00 — 22:00</span>
+              <span>12:00 — 20:00</span>
             </div>
             <div className="flex justify-between py-1">
               <span>сб — вс</span>
-              <span>12:00 — 22:00</span>
+              <span>12:00 — 20:00</span>
             </div>
           </div>
           <a

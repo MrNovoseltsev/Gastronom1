@@ -7,7 +7,7 @@ export function TopBar() {
         <div className="flex items-center gap-3 md:gap-5">
           <span className="flex items-center gap-1.5">
             <span className="size-1.5 rounded-full bg-olive" />
-            Открыто · до 22:00
+            Открыто · до 20:00
           </span>
           <span className="hidden md:inline">
             Доставка по Буэнос-Айресу — от 25 000 ARS
