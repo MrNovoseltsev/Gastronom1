@@ -40,6 +40,9 @@
     background: var(--color-bg);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /* закрытая корзина уезжает за правый край (translateX) — обрезаем
+       горизонтальное переполнение. clip, а не hidden: не ломает sticky-хедер. */
+    overflow-x: clip;
   }
   /* скрытие скроллбара у горизонтальных лент (суб-нав, мобильный сайдбар) */
   .no-scrollbar {

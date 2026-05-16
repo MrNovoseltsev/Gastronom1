@@ -23,16 +23,16 @@ export function Header({
 }: Props) {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-bg">
-      <div className="mx-auto grid h-[68px] max-w-[1280px] grid-cols-[auto_1fr_auto] items-center gap-4 px-4 md:h-[84px] md:gap-8 md:px-7">
+      <div className="mx-auto grid h-[68px] max-w-[1280px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2.5 px-4 md:h-[84px] md:gap-8 md:px-7">
         <a
           href="#"
           aria-label="gastronom1"
-          className="font-display text-[26px] font-extrabold leading-none tracking-[-0.04em] text-red md:text-[34px]"
+          className="font-display text-[22px] font-extrabold leading-none tracking-[-0.04em] text-red md:text-[34px]"
         >
           gastronom1
         </a>
 
-        <label className="relative flex h-10 items-center rounded-full border border-line bg-cream pr-3 pl-9 transition-colors focus-within:border-ink md:h-11 md:pr-4 md:pl-11">
+        <label className="relative flex h-10 min-w-0 items-center rounded-full border border-line bg-cream pr-3 pl-9 transition-colors focus-within:border-ink md:h-11 md:pr-4 md:pl-11">
           <span className="absolute left-3 text-ink-soft md:left-4">
             <IconSearch className="size-4" />
           </span>
@@ -55,7 +55,7 @@ export function Header({
             type="button"
             aria-label="Профиль"
             onClick={onOpenAuth}
-            className="grid size-11 place-items-center rounded-full border border-line bg-cream transition-colors hover:border-ink-soft hover:bg-white"
+            className="grid size-10 shrink-0 place-items-center rounded-full border border-line bg-cream transition-colors hover:border-ink-soft hover:bg-white md:size-11"
           >
             {user ? (
               <span className="grid size-[26px] place-items-center rounded-full bg-ink font-mono text-[13px] font-bold text-cream">
@@ -70,7 +70,7 @@ export function Header({
             type="button"
             aria-label="Корзина"
             onClick={onOpenCart}
-            className="flex h-11 items-center gap-2.5 rounded-full bg-ink px-4 text-sm font-medium text-cream transition-colors hover:bg-black"
+            className="flex h-10 shrink-0 items-center gap-2 rounded-full bg-ink px-3 text-sm font-medium text-cream transition-colors hover:bg-black md:h-11 md:gap-2.5 md:px-4"
           >
             <IconBag className="size-[18px]" />
             <span className="hidden md:inline">Корзина</span>
